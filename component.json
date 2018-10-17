@@ -1,0 +1,52 @@
+{
+	"title": "XPC Himanshu Demo",
+	"description": "XPC Demo using rest api",
+	"docsUrl": "",
+	"credentials": {
+		"fields": {
+			"apiKey": {
+				"label": "API Key",
+				"required": true,
+				"viewClass": "TextFieldView"
+			},
+			"baseUrl": {
+				"label": "Base Url",
+				"required": true,
+				"viewClass": "TextFieldView"
+			},
+			"myDB": {
+				"label": "Database Name",
+				"required": true,
+				"viewClass": "TextFieldView"
+			},
+			"user": {
+				"label": "User Name",
+				"required": true,
+				"viewClass": "TextFieldView"
+			},
+			"password": {
+				"label": "Password",
+				"required": true,
+				"viewClass": "PasswordFieldView"
+			}
+		}
+	},
+	"triggers": {
+    "getAllUserInfo": {
+      "main": "./lib/triggers/getAllUserInfo.js",
+      "type": "polling",
+      "title": "Get All User Info"
+		}
+  },
+  "actions": {
+    "upsertUser": {
+      "main": "./lib/actions/upsertUser.js",
+      "title": "Upsert User",
+      "metadata": {
+        "in": "./lib/schemas/upsertUser.in.json",
+        "out": "./lib/schemas/upsertUser.out.json"
+      }
+    }
+  }
+}
+

@@ -1,0 +1,29 @@
+{
+  "name": "XPCDemo",
+  "version": "0.0.1",
+  "description": "xpc demo",
+  "scripts": {
+    "pretest": "eslint --ignore-path .gitignore ."
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "Himanshu",
+  "license": "BSD-2-Clause",
+  "engines": {
+    "node": "8.6.0",
+    "npm": ">=5.4"
+  },
+  "dependencies": {
+    "co": "4.6.0",
+    "dateformat": "^3.0.3",
+    "elasticio-node": "0.0.8",
+    "elasticio-sailor-nodejs": "2.2.1",
+    "moment": "^2.22.2",
+    "promise": "^8.0.1",
+    "request": "^2.76.0",
+    "request-promise": "^4.2.2",
+    "underscore": "^1.9.1"
+  }
+}
